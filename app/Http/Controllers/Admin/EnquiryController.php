@@ -16,7 +16,7 @@ use App\Exports\ExtendedWarrantyExport;
 use Illuminate\Support\Facades\Session;
 
 
-class TradeEnquiryController extends BaseController
+class EnquiryController extends BaseController
 {
   use ResourceTrait;
   /**         
@@ -73,9 +73,10 @@ class TradeEnquiryController extends BaseController
     $i = 0;
     foreach ($collections as $collection) {
       $resultArr[$i]['id'] = $collection->id;
-      $resultArr[$i]['email'] = $collection->email;
       $resultArr[$i]['name'] = ucwords(strtolower($collection->name));
       $resultArr[$i]['contact_no'] = $collection->contact_no;
+      $resultArr[$i]['city'] = $collection->city;
+      $resultArr[$i]['vehicle_model'] = $collection->model_name;
       $resultArr[$i]['created_on'] = Carbon::parse($collection->created_at)->format('d F Y');
       $resultArr[$i]['district'] = $collection->district;
       $resultArr[$i]['pincode'] = $collection->pincode;

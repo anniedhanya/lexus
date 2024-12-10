@@ -15,7 +15,7 @@ Route::post('/enquiry', 'App\\Http\\Controllers\\HomeController@enquiry')->name(
 
 Route::get('/check-order-id', 'App\Http\Controllers\HomeController@checkOrderId'); 
 
-Route::get('detail', 'App\Http\Controllers\HomeController@detailPage')->name('detail');
+Route::get('detail/{id}', 'App\Http\Controllers\HomeController@detailPage')->name('detail');
 
 
 Route::get('no_access', 'App\\Http\\Controllers\\SettingsController@no_access')->middleware('checkRole:client');
@@ -96,8 +96,8 @@ Route::group(array('prefix' => 'admin', 'middleware' => ['auth.admin']), functio
   Route::post('users_export', 'App\Http\Controllers\Admin\UsersController@usersExport');
 
 
-  //Trade Enquiry
-  Route::resource('enquiries', 'App\Http\Controllers\Admin\TradeEnquiryController', ['names' => [
+  //Enquiry
+  Route::resource('enquiries', 'App\Http\Controllers\Admin\EnquiryController', ['names' => [
     'create' => 'Admin.enquiries.create',
     'index' => 'Admin.enquiries.index',
     'store' => 'Admin.enquiries.store',
@@ -106,9 +106,9 @@ Route::group(array('prefix' => 'admin', 'middleware' => ['auth.admin']), functio
     'destroy' => 'Admin.enquiries.destroy'
   ]]);
   Route::group(['prefix' => 'enquiries'], function () {
-    Route::post('enquiry_list', 'App\Http\Controllers\Admin\TradeEnquiryController@enquiryList');
+    Route::post('enquiry_list', 'App\Http\Controllers\Admin\EnquiryController@enquiryList');
   });
-  Route::get('trade_enquiry_delete', 'App\Http\Controllers\Admin\TradeEnquiryController@tradeEnquiryDelete');
+  Route::get('enquiry_delete', 'App\Http\Controllers\Admin\EnquiryController@tradeEnquiryDelete');
 
 //Model Management
   Route::resource('model_management', 'App\Http\Controllers\Admin\ModelManagementController', ['names' => [

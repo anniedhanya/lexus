@@ -32,7 +32,7 @@ class Enquiry extends BaseModel {
   protected $table = 'enquiry';
  
   protected $fillable = [
-      'name','contact_no','email','district','pincode','model_name','status','message','created_at'
+      'courtesy_title','name','contact_no','city','model_name','status','message','created_at'
   ];
 
   public $uploadPath = array('thumbnails' => ''); 

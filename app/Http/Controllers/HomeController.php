@@ -11,7 +11,8 @@ use App\Models\Enquiry;
 use App\Models\ServiceRequest;
 use App\Models\Settings;
 use App\Models\Model;
-
+use Illuminate\Support\Facades\Validator;
+use App\Models\ModelImages;
 class HomeController extends Controller {
 
     
@@ -24,51 +25,67 @@ class HomeController extends Controller {
     return view('index', compact('home_content', 'models'));
   } 
 
-  public function detailPage() {
-    return view('detail');
+  public function detailPage($id) {
+    $models = ModelImages::select('banner_image')->where('model_id',$id)->first();   
+    if ($models && $models->banner_image) {
+    $bannerImagesArray = explode(',', $models->banner_image);
+    } else {
+    $bannerImagesArray = [];
+    }
+    return view('detail', compact('bannerImagesArray'));
+
   }
 
   // public function EnquireUs() {
   //   return view('enquire_us');
   // }
 
-
     public function enquiry(Request $request){
-      dd($request->all());
       $data=$request->all();
-      $request->validate([
+      $validator = Validator::make(
+        $data,[
       'courtesy_title' => 'required',
       'name' => 'required|string|max:50',
-      'phone' => 'required|number|max:13',
+      'phone' => 'required|max:13',
       'city' => 'required',
       'vehicle_model' => 'required',
-      'job_title' => 'required',
-      'company' => 'required',
-      'message' => 'required',
+      // 'job_title' => 'required',
+      // 'company' => 'required',
   ], [
       'courtesy_title' => 'Please select courtesy title.',
       'name.required' => 'Please enter name.',
       'phone.required' => 'Please enter contact number.',
       'city.required' => 'Please enter city name',
       'vehicle_model.required' => 'Please enter vehicle model',
-      'job_title.required' => 'Please enter job title',
-      'company.required' => 'Please enter company name',
-      'message.required' => 'Please enter your message',
+      // 'job_title.required' => 'Please enter job title',
+      // 'company.required' => 'Please enter company name',
   ]);
+
+  if ($validator->fails()) {
+    return redirect()->back()->withInput()->withErrors($validator->errors());
+  } else {
+
+    if($request->courtesy_title == 'option1') {
+      $courtesy_title = 1;
+    } else if($request->courtesy_title == 'option2') {
+      $courtesy_title = 2;
+    } else {
+      $courtesy_title = 3;
+    }
   
       $data = new Enquiry(); 
-      $data['courtesy_title'] = $request->courtesy_title;
+      $data['courtesy_title'] = $scourtesy_title;
       $data['name'] = ucwords(strtolower($request->name));
       $data['contact_no'] = $request->phone;
       $data['city'] = $request->city;
-      $data['vehicle_model'] = $request->vehicle_model;
-      $data['job_title'] = $request->job_title;
-      $data['company'] = $request->company;
-      $data['pincode'] = $request->pincode;
-
+      $data['model_name'] = $request->vehicle_model;
+      // $data['job_title'] = $request->job_title;
+      // $data['company'] = $request->company;
+      $data['status'] = 1;
       $data['message'] = $request->message;
 
       $data->save();
+      }
       return redirect()->back()->with('success', 'You have submitted your enquiry successfully!');
   }
 }

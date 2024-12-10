@@ -157,10 +157,10 @@
                                     <th>S.No</th>
                                     <th>Unique ID</th>
                                     <th>Name</th>
-                                    <th>Email</th>
+                                    <!-- <th>Email</th> -->
                                     <th>Contact Number</th>
-                                    <th>District</th>
-                                    <th>Pincode</th>
+                                    <th>City</th>
+                                    <th>Vehicle Model</th>
                                     <th>Added On</th>
                                     <th style="width:100px !important;">Message</th>
                                     <th>Actions</th>
@@ -311,7 +311,7 @@
                         var slno = j+data.offset;
                         var str = '<tr>';
                    
-                        str += '<td>'+slno+'</td><td>'+data.result[i].id+'</td><td>'+data.result[i].name+'</td><td>'+data.result[i].email+'</td><td>'+data.result[i].contact_no+'</td><td>'+data.result[i].district+'</td><td>'+data.result[i].pincode+'</td><td>'+data.result[i].created_on+'</td><td>'+data.result[i].message+'</td><td><a href="' +url_+'/admin/enquiries/'+data.result[i].id + '/edit'+'" class="" title="Edit"><img src="{{asset('img/edit.svg')}}" alt="Edit Icon" height="25"></a>';
+                        str += '<td>'+slno+'</td><td>'+data.result[i].id+'</td><td>'+data.result[i].name+'</td><td>'+data.result[i].contact_no+'</td><td>'+data.result[i].city+'</td><td>'+data.result[i].vehicle_model+'</td><td>'+data.result[i].created_on+'</td><td>'+data.result[i].message+'</td><td><a href="' +url_+'/admin/enquiries/'+data.result[i].id + '/edit'+'" class="" title="Edit"><img src="{{asset('img/edit.svg')}}" alt="Edit Icon" height="25"></a>';
                         if(data.user_type != 2) {
                             str += '<a href="#" class="connector_delete" title="Delete"><img src="{{asset('img/delete.svg')}}" alt="Delete Icon" height="25"  onclick="charging_point_delete('+data.result[i].id+')"></a>';
                         }
@@ -424,7 +424,7 @@ $('#to_date').datepicker({
                         var url_ = '<?php echo url('/');?>';
                         var slno = j+data.offset;
                         var str = '<tr>';
-                        str += '<td>'+slno+'</td><td>'+data.result[i].id+'</td><td>'+data.result[i].name+'</td><td>'+data.result[i].email+'</td><td>'+data.result[i].contact_no+'</td><td>'+data.result[i].district+'</td><td>'+data.result[i].pincode+'</td><td>'+data.result[i].created_on+'</td><td>'+data.result[i].message+'</td><td><a href="' +url_+'/admin/enquiries/'+data.result[i].id + '/edit'+'" class="" title="Edit"><img src="{{asset('img/edit.svg')}}" alt="Edit Icon" height="25"></a>';
+                        str += '<td>'+slno+'</td><td>'+data.result[i].id+'</td><td>'+data.result[i].name+'</td><td>'+data.result[i].contact_no+'</td><td>'+data.result[i].city+'</td><td>'+data.result[i].vehicle_model+'</td><td>'+data.result[i].created_on+'</td><td>'+data.result[i].message+'</td><td><a href="' +url_+'/admin/enquiries/'+data.result[i].id + '/edit'+'" class="" title="Edit"><img src="{{asset('img/edit.svg')}}" alt="Edit Icon" height="25"></a>';
                         if(data.user_type != 2) {
                             str += '<a href="#" class="connector_delete" title="Delete"><img src="{{asset('img/delete.svg')}}" alt="Delete Icon" height="25"  onclick="charging_point_delete('+data.result[i].id+')"></a>';
                         }
@@ -513,7 +513,7 @@ $('#to_date').datepicker({
                         var url_ = '<?php echo url('/');?>';
                         var slno = j+data.offset;
                         var str = '<tr>';
-                        str += '<td>'+slno+'</td><td>'+data.result[i].id+'</td><td>'+data.result[i].name+'</td><td>'+data.result[i].email+'</td><td>'+data.result[i].contact_no+'</td><td>'+data.result[i].district+'</td><td>'+data.result[i].pincode+'</td><td>'+data.result[i].created_on+'</td><td>'+data.result[i].message+'</td><td><a href="' +url_+'/admin/enquiries/'+data.result[i].id + '/edit'+'" class="" title="Edit"><img src="{{asset('img/edit.svg')}}" alt="Edit Icon" height="25"></a>';
+                        str += '<td>'+slno+'</td><td>'+data.result[i].id+'</td><td>'+data.result[i].name+'</td><td>'+data.result[i].contact_no+'</td><td>'+data.result[i].city+'</td><td>'+data.result[i].vehicle_model+'</td><td>'+data.result[i].created_on+'</td><td>'+data.result[i].message+'</td><td><a href="' +url_+'/admin/enquiries/'+data.result[i].id + '/edit'+'" class="" title="Edit"><img src="{{asset('img/edit.svg')}}" alt="Edit Icon" height="25"></a>';
                         if(data.user_type != 2) {
                             str += '<a href="#" class="connector_delete" title="Delete"><img src="{{asset('img/delete.svg')}}" alt="Delete Icon" height="25"  onclick="charging_point_delete('+data.result[i].id+')"></a>';
                         }
@@ -616,7 +616,7 @@ $('#to_date').datepicker({
                         
                         var str = '<tr>';
                        
-                        str += '<td>'+slno+'</td><td>'+data.result[i].id+'</td><td>'+data.result[i].name+'</td><td>'+data.result[i].email+'</td><td>'+data.result[i].contact_no+'</td><td>'+data.result[i].district+'</td><td>'+data.result[i].pincode+'</td><td>'+data.result[i].created_on+'</td><td>'+data.result[i].message+'</td><td><a href="' +url_+'/admin/enquiries/'+data.result[i].id + '/edit'+'" class="" title="Edit"><img src="{{asset('img/edit.svg')}}" alt="Edit Icon" height="25"></a>';
+                        str += '<td>'+slno+'</td><td>'+data.result[i].id+'</td><td>'+data.result[i].name+'</td><td>'+data.result[i].contact_no+'</td><td>'+data.result[i].city+'</td><td>'+data.result[i].vehicle_model+'</td><td>'+data.result[i].created_on+'</td><td>'+data.result[i].message+'</td><td><a href="' +url_+'/admin/enquiries/'+data.result[i].id + '/edit'+'" class="" title="Edit"><img src="{{asset('img/edit.svg')}}" alt="Edit Icon" height="25"></a>';
                         if(data.user_type != 2) {
                             str += '<a href="#" class="connector_delete" title="Delete"><img src="{{asset('img/delete.svg')}}" alt="Delete Icon" height="25"  onclick="charging_point_delete('+data.result[i].id+')"></a>';
                         }
@@ -741,7 +741,7 @@ $('#to_date').datepicker({
                         
                        var str = '<tr>';
                        
-                       str += '<td>'+slno+'</td><td>'+data.result[i].id+'</td><td>'+data.result[i].name+'</td><td>'+data.result[i].email+'</td><td>'+data.result[i].contact_no+'</td><td>'+data.result[i].district+'</td><td>'+data.result[i].pincode+'</td><td>'+data.result[i].created_on+'</td><td>'+data.result[i].message+'</td><td><a href="' +url_+'/admin/enquiries/'+data.result[i].id + '/edit'+'" class="" title="Edit"><img src="{{asset('img/edit.svg')}}" alt="Edit Icon" height="25"></a>';
+                       str += '<td>'+slno+'</td><td>'+data.result[i].id+'</td><td>'+data.result[i].name+'</td><td>'+data.result[i].contact_no+'</td><td>'+data.result[i].city+'</td><td>'+data.result[i].vehicle_model+'</td><td>'+data.result[i].created_on+'</td><td>'+data.result[i].message+'</td><td><a href="' +url_+'/admin/enquiries/'+data.result[i].id + '/edit'+'" class="" title="Edit"><img src="{{asset('img/edit.svg')}}" alt="Edit Icon" height="25"></a>';
                        if(data.user_type != 2) {
                             str += '<a href="#" class="connector_delete" title="Delete"><img src="{{asset('img/delete.svg')}}" alt="Delete Icon" height="25"  onclick="charging_point_delete('+data.result[i].id+')"></a>';
                         }

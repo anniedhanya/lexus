@@ -6,16 +6,16 @@
 <title>Lexus Details</title>
 <link rel="shortcut icon" href="favicon.png">
 <!-- Common css -->
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/viewport.css">
-<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/viewport.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
 <!-- font -->
-<link rel="stylesheet" href="assets/font/stylesheet.css">
+<link rel="stylesheet" href="{{asset('assets/font/stylesheet.css')}}">
 <!-- owl carousel -->
-<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
-<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/bootstrap-icons.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/jquery.fancybox.min.css')}}">
 <!-- animation -->
 <link href="assets/css/aos.css" rel="stylesheet">
 </head>
@@ -30,7 +30,7 @@
       <div class="col-12">
         <nav class="navbar navbar-expand-lg p-0 main-navigation"> 
           <!--  Show this only on mobile to medium screens  --> 
-          <a class="navbar-brand logo" href="#"> <img src="assets/images/lexus-logo.svg" class="img-fluid" alt="logo" width="" /> </a> </nav>
+          <a class="navbar-brand logo" href="#"> <img src="{{asset('assets/images/lexus-logo.svg')}}" class="img-fluid" alt="logo" width="" /> </a> </nav>
       </div>
     </div>
   </div>
@@ -49,85 +49,87 @@
       </div>
       <div class="modal-body">
       <form action="{{ route('enquiry') }}" method="POST">
-      @csrf
-        <div class="enquirySec">
-          <div class="enquiryImg"> <img src="assets/images/enquiry-image.webp"/> </div>
-          <div class="enquiryForm">
-            <h1 class="modal-title" id="staticBackdropLabel">Make an Enquiry</h1>
-            <p>Feel free to contact with us, we would love to assist you</p>
-            <form action="{{ route('enquiry') }}" method="POST">
-              @csrf
-            <div class="enquiryFormBlock">
-              <div class="chooseCheck">
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                  <label class="form-check-label" for="inlineRadio1">Mr.</label>
+        @csrf
+          <div class="enquirySec">
+            <div class="enquiryImg"> <img src="assets/images/enquiry-image.webp"/> </div>
+            <div class="enquiryForm">
+              <h1 class="modal-title" id="staticBackdropLabel">Make an Enquiry</h1>
+              <p>Feel free to contact with us, we would love to assist you</p>
+              <div class="enquiryFormBlock">
+                <div class="chooseCheck">
+                  <div class="form-check form-check-inline">
+                    {!! Form::radio('courtesy_title', 'option1', old('courtesy_title') == 'option1', ['class' => 'form-check-input', 'id' => 'inlineRadio1']) !!}
+                    {!! Form::label('inlineRadio1', 'Mr.', ['class' => 'form-check-label']) !!}
+                  </div>
+                  <div class="form-check form-check-inline">
+                    {!! Form::radio('courtesy_title', 'option2', old('courtesy_title') == 'option2', ['class' => 'form-check-input', 'id' => 'inlineRadio2']) !!}
+                    {!! Form::label('inlineRadio2', 'Mrs.', ['class' => 'form-check-label']) !!}
+                  </div>
+                  <div class="form-check form-check-inline">
+                    {!! Form::radio('courtesy_title', 'option3', old('courtesy_title') == 'option3', ['class' => 'form-check-input', 'id' => 'inlineRadio3']) !!}
+                    {!! Form::label('inlineRadio3', 'Ms.', ['class' => 'form-check-label']) !!}
+                  </div>
                 </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">Mrs.</label>
+                <div class="row formBlock">
+                  <div class="col-lg-12">
+                    <label for="exampleFormControlInput1" class="form-label">Name*</label>
+                    {!! Form::text('name', old('name'), array('class'=>'form-control', 'id'=>'name','placeholder'=>'')) !!} 
+                    <span  class="text-danger error" style="color:#e03b3b" id="name_error">{{ $errors->first('name') }}</span> 
+                    </div>
                 </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">Ms.</label>
+                <div class="row formBlock formBlockSelect">
+                  <div class="col-lg-12">
+                    <label for="exampleFormControlInput1" class="form-label">Mobile Number*</label>
+                  </div>
+                  <div class="col-lg-4">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>+91</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-8">
+                  {!! Form::text('phone', old('phone'), array('class'=>'form-control', 'id'=>'phone','placeholder'=>'')) !!}
+                  <span  class="text-danger error" style="color:#e03b3b" id="phone_error">{{ $errors->first('phone') }}</span>  
+                  </div>
                 </div>
-              </div>
-              <div class="row formBlock">
-                <div class="col-lg-12">
-                  <label for="exampleFormControlInput1" class="form-label">Name*</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                <div class="row formBlock formBlockCityModel">
+                  <div class="col-lg-6">
+                    <label for="exampleFormControlInput1" class="form-label">City</label>
+                    {!! Form::text('city', old('city'), array('class'=>'form-control', 'id'=>'city','placeholder'=>'')) !!}
+                    <span  class="text-danger error" style="color:#e03b3b" id="city_error">{{ $errors->first('city') }}</span>  
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="exampleFormControlInput1" class="form-label">Vehicle Model</label>
+                    {!! Form::text('vehicle_model', old('vehicle_model'), array('class'=>'form-control', 'id'=>'vehicle_model','placeholder'=>'')) !!}
+                    <span  class="text-danger error" style="color:#e03b3b" id="vehicle_model_error">{{ $errors->first('vehicle_model') }}</span>  
+                  </div>
                 </div>
-              </div>
-              <div class="row formBlock formBlockSelect">
-                <div class="col-lg-12">
-                  <label for="exampleFormControlInput1" class="form-label">Mobile Number*</label>
+                <!-- <div class="row formBlock">
+                  <div class="col-lg-12">
+                    <label for="exampleFormControlInput1" class="form-label">Job Title</label>
+                    {!! Form::text('job_title', old('job_title'), array('class'=>'form-control', 'id'=>'job_title','placeholder'=>'')) !!} 
+                  </div>
+                </div> -->
+                <!-- <div class="row formBlock">
+                  <div class="col-lg-12">
+                    <label for="exampleFormControlInput1" class="form-label">Company</label>
+                    {!! Form::text('city', old('city'), array('class'=>'form-control', 'id'=>'city','placeholder'=>'')) !!} 
+                  </div>
+                </div> -->
+                <div class="row formBlock">
+                  <div class="col-lg-12">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message/Comments</label>
+                    {!! Form::textarea('comments', old('comments'), array('class'=>'form-control', 'id'=>'comments', 'rows'=>'3', 'placeholder'=>'')) !!} 
+                  </div>
                 </div>
-                <div class="col-lg-4">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>+91</option>
-                  </select>
-                </div>
-                <div class="col-lg-8">
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
-              </div>
-              <div class="row formBlock formBlockCityModel">
-                <div class="col-lg-6">
-                  <label for="exampleFormControlInput1" class="form-label">City</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
-                <div class="col-lg-6">
-                  <label for="exampleFormControlInput1" class="form-label">Vehicle Model</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
-              </div>
-              <div class="row formBlock">
-                <div class="col-lg-12">
-                  <label for="exampleFormControlInput1" class="form-label">Job Title</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
-              </div>
-              <div class="row formBlock">
-                <div class="col-lg-12">
-                  <label for="exampleFormControlInput1" class="form-label">Company</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
-              </div>
-              <div class="row formBlock">
-                <div class="col-lg-12">
-                  <label for="exampleFormControlTextarea1" class="form-label">Message/Comments</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-              </div>
-              <div class="row formBlock">
-                <div class="col-lg-12 text-end">
-                  <button type="submit" class="primaryBtn">Submit</button>
+                <div class="row formBlock">
+                  <div class="col-lg-12 text-end">
+                    <button type="submit" class="primaryBtn">Submit</button>
+                  </div>
                 </div>
               </div>
             </div>
-            </form>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
@@ -146,16 +148,24 @@
       </div>
       <div class="col-lg-12 ">
         <div id="carouselInner" class="carousel slide" data-bs-ride="carousel">
+         
           <div class="carousel-inner">
-            <div class="carousel-item active"> <img src="assets/images/details/slider1.webp" class="d-block w-100" alt="..."> </div>
-            <div class="carousel-item"> <img src="assets/images/details/slider2.webp" class="d-block w-100" alt="..."> </div>
-            <div class="carousel-item"> <img src="assets/images/details/slider3.webp" class="d-block w-100" alt="..."> </div>
+             @if(count($bannerImagesArray)>0)
+          @foreach ($bannerImagesArray as $index => $banner)
+            <div class="carousel-item {{ $index === 0 ? 'active' : '' }}"> <img src="{{asset($banner)}}" class="d-block w-100" alt="..."> </div>
+              @endforeach
+          @endif
           </div>
+        
+          
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselInner" data-bs-slide-to="0" class="active " aria-current="true" aria-label="Slide 1"> </button>
-            <button type="button" data-bs-target="#carouselInner" data-bs-slide-to="1" class="" aria-label="Slide 2"> </button>
-            <button type="button" data-bs-target="#carouselInner" data-bs-slide-to="2" class="" aria-label="Slide 3"> </button>
+            @if(count($bannerImagesArray)>0)
+          @foreach ($bannerImagesArray as $indx => $banner)
+            <button type="button" data-bs-target="#carouselInner" data-bs-slide-to="{{$indx}}" class="{{ $indx === 0 ? 'active' : '' }}"  {{ $indx === 0 ? 'aria-current="true"' : '' }}    aria-label="Slide {{$indx}}"> </button>
+               @endforeach
+          @endif
           </div>
+     
         </div>
       </div>
       <div class="col-lg-12 detailContent"  data-aos="fade-up" data-aos-duration="2500">
@@ -185,7 +195,7 @@
         <div class="priceRight">From  INR 64,00,000</div>
       </div>
       <div class="exploreDataSec">
-        <div class="flex_image_div"> <img class="w-100" src="assets/images/details/car1.png"> </div>
+        <div class="flex_image_div"> <img class="w-100" src="{{asset('assets/images/details/car1.png')}}"> </div>
         <div class="exploreTitle exploreTitle-sm"> <span>Hybrid Electric</span>
           <div class="priceRight">From  INR 64,00,000</div>
         </div>
@@ -207,7 +217,7 @@
         <div class="priceRight">From  INR 69,70,000</div>
       </div>
       <div class="exploreDataSec">
-        <div class="flex_image_div"> <img class="w-100" src="assets/images/details/car1.png"> </div>
+        <div class="flex_image_div"> <img class="w-100" src="{{asset('assets/images/details/car1.png')}}"> </div>
         <div class="exploreTitle exploreTitle-sm"> <span>Hybrid Electric</span>
           <div class="priceRight">From  INR 69,70,000</div>
         </div>
@@ -248,18 +258,18 @@
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
               <div class="custom-nav ms-auto">
-                <button class="owl-prev"> <img src="assets/images/details/arrowLeft.svg"/> </button>
-                <button class="owl-next"> <img src="assets/images/details/arrowRight.svg"/> </button>
+                <button class="owl-prev"> <img src="{{asset('assets/images/details/arrowLeft.svg')}}"/> </button>
+                <button class="owl-next"> <img src="{{asset('assets/images/details/arrowRight.svg')}}"/> </button>
               </div>
               <div class="owl-carousel gallery_carousel owl-theme">
                 <div class="item">
                   <div class="gallery_block">
-                    <div class="gallery_blockinner"> <a href="assets/images/details/gallery/gallery1.webp" data-fancybox="images" data-caption="My caption"> <img src="assets/images/details/gallery/gallery1-sm.webp"/> </a> </div>
+                    <div class="gallery_blockinner"> <a href="{{asset('assets/images/details/gallery/gallery1.webp')}}" data-fancybox="images" data-caption="My caption"> <img src="assets/images/details/gallery/gallery1-sm.webp"/> </a> </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="gallery_block">
-                    <div class="gallery_blockinner"> <a href="assets/images/details/gallery/gallery2.webp" data-fancybox="images" data-caption="My caption"> <img src="assets/images/details/gallery/gallery2-sm.webp"/> </a> </div>
+                    <div class="gallery_blockinner"> <a href="{{asset('assets/images/details/gallery/gallery2.webp')}}" data-fancybox="images" data-caption="My caption"> <img src="assets/images/details/gallery/gallery2-sm.webp"/> </a> </div>
                   </div>
                 </div>
                 <div class="item">
@@ -321,7 +331,7 @@
               <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0"> <img src="assets/images/details/feature-image1.webp" alt="..."> </div>
+                    <div class="flex-shrink-0"> <img src="{{asset('assets/images/details/feature-image1.webp')}}" alt="..."> </div>
                     <div class="flex-grow-1 ms-3">
                       <p>A proprietary Lexus method is used to produce highly rigid rear suspension-member braces. This allows for superior steering stability and a linear driving sensation even when performing high-speed lane changes.</p>
                     </div>
@@ -466,7 +476,7 @@
   <section class="homecontact_section"  >
     <div class="container-fluid">
       <div class="row d-flex">
-        <div class="col-lg-6"> <img class="w-100 lexusimgLeft" src="assets/images/lexus-left-image.webp"/> </div>
+        <div class="col-lg-6"> <img class="w-100 lexusimgLeft" src="{{asset('assets/images/lexus-left-image.webp')}}"/> </div>
         <div class="col-lg-6">
           <div class="lexusContact" data-aos="fade-up" data-aos-duration="2500">
             <div class="addressTitle">We are in Kochi, Visit Us</div>
@@ -498,8 +508,8 @@
 </body>
 
 <!-- Common script -->
-<script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
 <script>
 var myCarousel = document.querySelector('#carouselInner')
 var carousel = new bootstrap.Carousel(carouselInner, {
@@ -515,10 +525,10 @@ AOS.init();
 </script>
 
 <!-- owl carousel -->
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/jquery.fancybox.min.js"></script>
+<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.fancybox.min.js')}}"></script>
 <!-- custom -->
-<script src="assets/js/custom.js"></script>
+<script src="{{asset('assets/js/custom.js')}}"></script>
 <!-- header shrink -->
 <script>
 $(document).on("scroll", function(){
