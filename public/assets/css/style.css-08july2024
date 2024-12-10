@@ -1,0 +1,106 @@
+body{margin: 0; padding: 0;font-family: "Lato", sans-serif; font-size: 14px;}
+header {position: sticky;top: 0;right: 0;left: 0;padding-top: 5px;padding-bottom: 5px;padding-left: 0;padding-right: 0;z-index: 100;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-ms-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;background: #fff;}
+.for_shopheadmenu {padding: 0;background: #d31342;}
+.navbar-classic.navbar {padding: 0px 0px 0px 0;}
+.navbar-classic .navbar-toggler, .navbar-boxed .navbar-toggler {padding: 17px 15px;font-size: 1.25rem;line-height: 1;background-color: transparent;border: 1px solid #eaeaf0;border-radius: .25rem;position: relative;}
+.navbar-classic .navbar-nav .nav-item .nav-link {font-size: 16px;color: #fff;padding: 12px 18px;line-height: 20px;}
+.shop_logo{padding-top: 10px; padding-bottom: 10px;}
+.shop_logo img{max-width: 175px;}
+.shop_footer {margin-top: 10px;padding: 20px 0;background: #f5f5f5;font-size: 14px;}
+.powerd_ {text-align: right;}
+.main_content{padding: 60px 0;}
+.warranty_title{text-align: center}
+.warranty_title h2{font-size: 2.5rem; font-weight: 700;}
+.warranty_title p{font-size: 1.15rem;}
+.btn-primary_warranty{color: #fff;background: #d31342;border-radius: 2px;padding: 8px 30px;}
+.btn-primary_warranty:hover{color: #fff;background: #d31342;}
+.form_page .form-label{    margin: 0 0 4px 0;
+font-size: 14px;
+font-weight: 600;}
+.form_page .form-control, .form_page .form-select{padding: 0 1rem; height: 45px;line-height: 1; color: #5e5e5e;}
+.form_page textarea.form-control{height: 150px; line-height: 1.4;}
+.form_page h3{font-size: 16px;
+font-weight: 700;
+margin-bottom: 30px;}
+.form_page h3 span{font-weight: 400; color: #d31342}    
+.form_page input[type=file] {
+padding: 0;
+margin: 0;
+position: relative;
+outline: none;
+width: 100%;
+border: 1px solid #dee2e6;
+border-radius: 0.375rem;
+height: 45px;
+line-height: 45px;
+color: #5e5e5e;
+}
+.form_page input[type=file]::file-selector-button {
+border-radius: 0;
+padding: 0 16px;
+height: 45px;
+cursor: pointer;
+background-color: white;
+border: 1px solid rgba(0, 0, 0, 0.16);
+border-bottom: 0;
+border-top: 0;
+border-left: 0;
+margin-right: 16px;
+width: 132px;
+color: transparent;
+}
+@supports (-moz-appearance: none) {
+.form_page input[type=file]::file-selector-button {
+color: #000;
+}
+}
+.form_page input[type=file]::file-selector-button:hover {
+background-color: #f3f4f6;
+}
+.form_page input[type=file]::file-selector-button:active {
+background-color: #e5e7eb;
+}
+.form_page input[type=file]::before {
+position: absolute;
+pointer-events: none;
+top: 10px;
+left: 12px;
+height: 20px;
+width: 20px;
+content: "";
+background-image: url("../images/upload.svg");
+}
+.form_page input[type=file]::after {
+position: absolute;
+pointer-events: none;
+top: 0;
+left: 40px;
+color: #000;
+content: "Upload File";}
+.form_page input[type=file]:focus-within::file-selector-button, input[type=file]:focus::file-selector-button {
+outline: 2px solid #000;outline-offset: 2px;}
+.madatory{color: #d31342; font-weight: 700;}
+.support_thumbnail {
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    display: block; text-decoration: none;
+}
+.support_thumbnail h3{font-size: 24px; color: #000;}
+.support_thumbnail img{margin-bottom: 10px;}
+.landing_main_page{min-height:76.6vh;}
+
+.overlay{position: absolute;
+top: 0;
+bottom: 0;
+left: 7%;
+width: 40%;}
+.overlay h2{
+font-size: 2.5rem;
+color: #fff;
+font-weight: 900;}
+.overlay p{
+font-size: 1rem;
+color: #fff;
+font-weight: 400;}

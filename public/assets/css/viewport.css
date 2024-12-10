@@ -1,0 +1,422 @@
+@media (min-width : 320px) and (max-width: 479px) {
+/*****common*****/
+h2{ font-size: 28px;}	
+h3 {font-size: 26px;}
+/******header******/		
+header{padding:10px 0;}	
+/******slider******/	
+.slider_section{ margin-top: 60px;}
+.slider_section .carousel-caption{display: block !important;left: 0px;padding: 0 0 0 15px;text-align: left;top: auto;width: auto;bottom: 15px; right: 0; transform: none; position: inherit; margin-top: 85px; }
+.slider_section .carousel-caption span {font-size: 18px;}
+.slider_section .carousel-caption h1{ font-size: 28px; line-height: 30px;margin-bottom:30px;}
+.slider_section .carousel-caption h5{font-size: 22px; line-height: 28px; margin-bottom: 10px;}
+.slider_section .carousel-caption h5 br{ display: none;}
+.slider_section .carousel-caption p{ font-size: 18px;}
+.carousel-indicators button.thumbnail {width: 75px;}
+.slider_section .carousel-indicators{bottom: auto;margin: 0;text-align: center;width: 100%;top: 150px;}
+.slideImg{ height: 165px;}
+.banrCTA .btn{padding: 10px 0px;font-size: 18px;margin-right: 5px; width: 46%;}
+.banrCTA {margin-top: 20px;}
+.lineDownload {font-size: 18px;float: right; margin: 20px;}
+.formBlockSelect .col-lg-4{ width: 40% !important;}
+.formBlockSelect .col-lg-8{ width: 60% !important; }
+.formBlockCityModel .form-control{ margin-bottom: 15px;}
+.enquiryForm h1 {font-size: 26px;}
+.form-control, .form-select{ font-size: 17px;}
+.form-label {font-size: 16px;}
+.chooseCheck {font-size: 17px;margin-bottom: 15px;}
+/******home contact******/	
+.lexusContact{ padding: 25px; height: auto;}
+.addressTitle {font-size: 30px;}
+.address{margin: 20px 0 15px 0;}
+.socialMediaSection {margin-top: 25px;padding-top: 15px;}
+.socialMediaSection{flex-direction: column;}
+.socialMediaBlock{ margin-left: 0; margin-top: 10px;}
+.lexusMap iframe{ height:300px;}
+/******footer******/
+.buttonscroll{right:15px;}
+/******detail******/
+.detailTitle{ flex-direction: column;}
+.detailTitle .line_btn {line-height: 16px;margin-top: 10px;}
+.exploreTitle-lg {display: none;}
+.exploreTitle-sm {display: flex; font-size: 18px;}
+.flex_image_div{ max-width: 100%;}
+.flex_content_div {padding: 0; max-width: 100%; flex-direction: column; margin-top: 15px; }
+.detailContent{ margin-top: 15px;}
+.exploreFeature {flex-direction: column;padding: 10px;text-align: center; font-size: 16px; padding-top: 25px;}
+.exploreFeature span {font-size: 22px;}
+.exploreDataSec {flex-direction: column; margin-top: 0;}
+.exploreCTA{ margin-top: 30px;}
+.custom-nav .owl-prev, .custom-nav .owl-next{ top: 110px;}
+.tabHead .nav-link {padding: 8px 20px; font-size: 18px;}
+.custom-nav .owl-prev img, .custom-nav .owl-next img{ width: 75px;}
+}
+@media (min-width : 375px) and (max-width: 480px) {
+.slider_section .carousel-indicators{ top:155px;}
+.carousel-indicators button.thumbnail {width: 95px;}
+}
+@media (min-width: 480px) and (max-width: 599px) {	
+/*****common*****/
+h2{ font-size: 30px;}	
+h3 {font-size: 26px;}
+/******header******/		
+header{padding:10px 0;}	
+/******slider******/	
+.slider_section{ margin-top: 60px;}
+.slider_section .carousel-caption{display: block !important;left: 0px;padding: 0 0 0 15px;text-align: left;top: auto;width: auto;bottom: 15px; right: 0; transform: none; position: inherit; margin-top: 75px; }
+.slider_section .carousel-caption span {font-size: 18px;}
+.slider_section .carousel-caption h1{ font-size: 30px; line-height: 30px;margin-bottom:30px;}
+.slider_section .carousel-caption h5{font-size: 24px; line-height: 32px; margin-bottom: 10px;}
+.slider_section .carousel-caption h5 br{ display: none;}
+.slider_section .carousel-caption p{ font-size: 18px;}
+.carousel-indicators button.thumbnail {width: 110px;}
+.slider_section .carousel-indicators{bottom: auto;margin: 0;text-align: center;width: 100%;top: 200px;}
+.banrCTA .btn{padding: 10px 0px;font-size: 18px;margin-right: 5px; width: 46%;}
+.banrCTA {margin-top: 20px;}
+.lineDownload {font-size: 18px;float: right;margin: 20px;}
+.slideImg{ height: 250px;}
+.formBlockSelect .col-lg-4{ width: 30% !important;}
+.formBlockSelect .col-lg-8{ width: 70% !important;}
+.formBlockCityModel .form-control{ margin-bottom: 15px;}
+.form-control, .form-select{ font-size: 17px;}
+.form-label {font-size: 16px;}
+.chooseCheck {font-size: 17px;margin-bottom: 15px;}
+/******home contact******/	
+.lexusimgLeft{ height: 350px; object-fit: cover;}
+.lexusContact{ padding: 25px; height: auto;}
+.addressTitle {font-size: 30px;}
+.address{margin: 20px 0 15px 0;}
+.socialMediaSection {margin-top: 25px;padding-top: 15px;}
+.socialMediaSection{flex-direction: column;}
+.socialMediaBlock{ margin-left: 0; margin-top: 10px;}
+.lexusMap iframe{ height:300px;}
+/******footer******/
+.buttonscroll{right:15px;}
+.detailTitle{ margin-bottom: 20px;}
+.exploreTitle-lg {display: none;}
+.exploreTitle-sm {display: flex; font-size: 18px;}
+.flex_image_div{ max-width: 100%;}
+.flex_content_div {padding: 0; max-width: 100%; flex-direction: column; margin-top: 15px;}
+.detailContent{ margin-top: 15px;}
+.exploreFeature {flex-direction: column;padding: 15px;text-align: center; font-size: 16px; padding-top: 25px;}
+.exploreFeature span {font-size: 22px;}
+.exploreDataSec {flex-direction: column; margin-top: 0;}
+.exploreCTA{ margin-top: 45px; margin-bottom: 20px;}
+.custom-nav .owl-prev, .custom-nav .owl-next{ top: 150px;}
+.tabHead .nav-link {padding: 8px 20px; font-size: 20px;}
+.custom-nav .owl-prev img, .custom-nav .owl-next img{ width: 90px;}
+}
+@media (min-width: 600px) and (max-width: 767px) {	
+/*****common*****/
+h2{ font-size: 32px;}	
+h3 {font-size: 30px;}
+/******slider******/		
+.slider_section {margin-top: 75px;}	
+.slider_section .carousel-caption{display: block !important;left: 20px;padding: 0;text-align: left;width: auto; top: 35%;  }
+.slider_section .carousel-caption h1{ font-size: 28px;line-height: 30px;margin-bottom: 24px;}
+.slider_section .carousel-caption h1 br{ display: none;}
+.slider_section .carousel-caption h5{font-size:22px; line-height: 32px; margin-bottom: 10px;}
+.slider_section .carousel-indicators { margin-bottom: 0;right: 0;left: auto;margin-right: 0;bottom: -50px;text-align: center;margin-left: 0;width: 100%;}
+.slider_section .carousel-caption p {font-size: 18px;}
+.banrCTA {margin-top: 15px;}
+.banrCTA .btn{padding: 8px 22px;font-size: 18px;}
+.lineDownload{ font-size: 18px;}
+.carousel-indicators button.thumbnail{width:120px;}
+.addressTitle {font-size: 30px;}
+.lexusContact {height: auto;padding: 40px 0 50px 50px;}
+.lexusMap iframe{ height: 300px;}
+.lexusimgLeft{ height: 400px; object-fit: cover;}
+.formBlockSelect .col-lg-4{ width: 25%;}
+.formBlockSelect .col-lg-8{ width: 75%;}
+.formBlockCityModel .form-control{ margin-bottom: 15px;}
+/******detail******/
+.flex_content_div{ flex-direction: column; padding-left: 0;}
+.exploreFeature span {font-size: 22px;}
+.exploreFeature {padding:15px;width: 33.33%; font-size: 18px;}
+.exploreFeatureSec { margin-bottom: 30px; width: 100%;}
+.exploreCTA{ width:100%; text-align: right;}
+.exploreTitle   h3 {font-size: 26px;}
+.priceRight{ font-size: 18px;}
+.explorevehicle_section .container{ max-width: 100%;}
+.custom-nav .owl-prev, .custom-nav .owl-next{ top:100px;}
+/******footer******/	
+.buttonscroll{right:15px;}	
+}
+@media (max-width: 767px) { 
+/*****common*****/
+p{ font-size: 16px; line-height: 26px;}
+.sec_padding {padding: 40px 0 0 0;}
+/*****header*****/
+header{ padding: 10px 0;}
+/*****slider*****/
+.slider_section .primary_btn {font-size: 16px;padding: 6px 18px;}
+.enquiryImg{ display: none;}
+.enquiryForm{ width: 100%; padding: 15px;}
+.enquiryModal .btn-close{border-radius: 100px; right: 15px; top:15px; filter: brightness(0) saturate(100%) invert(0%) sepia(95%) saturate(0%) hue-rotate(123deg) brightness(90%) contrast(105%);}
+.formBlockSelect .col-lg-4{ width: 25%;}
+.formBlockSelect .col-lg-8{ width: 75%;}
+.formBlockCityModel .form-control{ margin-bottom: 15px;}
+/******about******/
+.title_topTxt {font-size: 16px; margin-bottom: 5px;display: block;}
+.homecontact_section  .btn.line_btn.f_bold{ margin-bottom: 30px;}
+/******detail******/
+.slider_section_inner {margin-top: 70px; padding-bottom: 55px;}
+.detailContent p {font-size: 20px;padding: 0;margin-bottom: 35px;}
+.explorevehicle_section{padding-top: 30px;}
+.flex_sec{padding: 35px 15px;}
+.line_btn{ padding: 12px 30px;}
+.featureAccordion .accordion-body .d-flex.align-items-center{ flex-direction: column;}
+.featureAccordion .accordion-body .d-flex.align-items-center .flex-shrink-0 img{ width:100%;}
+.featureAccordion .accordion-body .d-flex.align-items-center .flex-grow-1.ms-3{ margin-left: 0 !important; margin-top: 15px;}
+.features_section { padding-top: 40px;}
+.featureAccordion .accordion-button {font-size: 22px;padding: 22px 0;}
+.featureAccordion {margin-bottom: 50px;}
+.tabHead, .tab-content{ margin-top: 20px;}
+.gallery_carousel .owl-stage-outer::before, .gallery_carousel .owl-stage-outer::after{ display: none;}
+}
+@media (min-width: 768px) {
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+/*****common*****/
+ h2{ font-size: 36px;}	
+h3 {font-size: 32px;}
+p{ font-size: 16px; line-height: 26px;}
+.sec_padding {padding: 50px 0 0 0;} 
+/*****header*****/
+header{ padding:10px 0;}
+/******slider******/	
+.slider_section {margin-top: 75px;}	
+.slider_section .carousel-caption{display: block !important;left: 20px;padding: 0;text-align: left;width: auto; top: 42%;  }
+.slider_section .carousel-caption h1{ font-size: 32px;line-height: 36px; margin-bottom: 20px;}
+.slider_section .carousel-caption h1 br{ display: none;}
+.slider_section .primary_btn{font-size: 18px;padding: 12px 34px;}
+.slider_section .carousel-control-next-icon, .slider_section .carousel-control-prev-icon{ display: none;}
+.slider_section .carousel-caption h5{font-size: 26px; line-height: 36px; margin-bottom: 15px;}
+.slider_section .carousel-caption p{ font-size: 18px;}
+.banrCTA {margin-top: 25px;}
+.banrCTA .btn {padding: 8px 26px;font-size: 18px;}
+.lineDownload{font-size: 18px;}
+.carousel-indicators button.thumbnail{width:130px;}
+.slider_section .carousel-indicators{ bottom: -50px; margin-right: 15px; margin-bottom: 0;}
+.form-control, .form-select{ font-size: 18px;}
+.lexusMap iframe{ height: 350px;}
+.lexusimgLeft{ height: 500px; object-fit: cover;}
+.lexusContact {padding: 45px 0 50px 50px; height: auto;}
+.title_topTxt {font-size: 17px; margin-bottom: 10px;display: block;}
+.sec_padding {padding: 45px 0 0 0;}
+.addressTitle {font-size: 36px;}
+.enquiryImg{ display: none;}
+.enquiryForm{ width: 100%; padding: 15px;}
+.enquiryModal .btn-close{border-radius: 100px; right: 15px; top:15px; filter: brightness(0) saturate(100%) invert(0%) sepia(95%) saturate(0%) hue-rotate(123deg) brightness(90%) contrast(105%);}
+.formBlockSelect .col-lg-4{ width: 25%;}
+.formBlockSelect .col-lg-8{ width: 75%;}
+.formBlockCityModel .form-control{ margin-bottom: 15px;}
+/******details*****/
+.flex_sec {padding: 35px 15px 50px 15px;}
+.flex_content_div{ flex-direction: column; padding-left: 0;}
+.exploreFeature span {font-size: 22px;}
+.exploreFeature {padding:15px;width: 33.33%; font-size: 18px; text-align: center;}
+.exploreFeatureSec { margin-bottom: 30px; width: 100%;}
+.exploreCTA{ width:100%; text-align: right;}
+.exploreTitle   h3 {font-size: 26px;}
+.priceRight{ font-size: 18px;}
+.explorevehicle_section .container{ max-width: 100%;}
+.custom-nav .owl-prev, .custom-nav .owl-next{ top:135px;}
+.features_section { margin-top: 50px;}
+.featureAccordion .accordion-button {font-size: 26px;padding: 20px 0;}
+.featureAccordion .flex-shrink-0{ width:35%;}
+.featureAccordion .flex-shrink-0 img{ width:100%;}
+.featureAccordion {margin-bottom: 80px;}
+.line_btn {padding: 12px 30px;}
+/******footer******/	
+.buttonscroll{right:15px;}				
+}
+@media only screen and (min-width: 800px)  {	
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+}
+@media (max-width: 991px) {	
+}
+@media (min-width: 992px) {
+}
+@media only screen and (min-width:992px) and (max-width:1100px) {
+/*****common*****/
+h2{ font-size: 40px;}	
+h3 {font-size: 38px;}
+p{ font-size: 16px; line-height: 26px;}
+.sec_padding {padding: 55px 0 0 0;} 
+/*****header*****/		
+header{ padding:10px 0;}
+/*****slider*****/	
+.slider_section	{ margin-top: 55px;}	
+.slider_section .carousel-caption{ left: 10%; top: 40%;}	
+.slider_section .carousel-caption span {font-size: 25px;}
+.slider_section .carousel-caption h1{font-size: 42px; line-height: 52px; margin-bottom: 30px;}	
+.slider_section .primary_btn {font-size: 18px;padding: 11px 33px;}
+.title_topTxt {font-size: 16px; display: block; margin-bottom: 5px;}
+.slider_section .carousel-caption h1 br{display: none;}
+.slider_section .carousel-caption h5 {font-size: 32px;margin-bottom: 20px; line-height: 42px;}
+.slider_section .carousel-caption p {font-size: 20px;}
+.carousel-indicators button.thumbnail{ width:140px;}
+.slider_section .carousel-indicators {margin-bottom: 0;right: 0;margin-right: 15px;bottom: 10px;}
+.banrCTA {margin-top: 25px;}
+.lexusContact {padding: 30px 0 30px 30px; height: auto;}
+.addressTitle {font-size: 30px;}
+.lexusimgLeft{ height: 100%; object-fit: cover;}
+.lexusMap iframe{ height: 350px;}
+.enquiryImg{ display: none;}
+.enquiryForm{ width: 100%; padding: 15px;}
+.formBlockCityModel .form-control{ margin-bottom: 15px;}
+/******details*****/
+.explorevehicle_section{ padding-top: 45px;}
+.flex_sec{ padding: 45px 4.5%;}
+.exploreTitle h3{ font-size: 28px;}
+.flex_content_div {padding-left: 0;}
+.exploreFeature{ padding: 20px;}
+.line_btn{ padding:12px 30px;}
+.exploreFeature span {font-size: 24px;}
+.custom-nav .owl-prev img, .custom-nav .owl-next img{ width:75px;}
+.custom-nav .owl-prev, .custom-nav .owl-next{ top:85px;}
+.features_section { margin-top: 65px;}
+.featureAccordion .accordion-button {font-size: 26px;padding: 25px 0;}
+.featureAccordion .flex-shrink-0{ width:35%;}
+.featureAccordion .flex-shrink-0 img{ width:100%;}
+.featureAccordion {margin-bottom: 80px;}
+/******footer******/	
+.buttonscroll{right:15px;}		
+}
+@media only screen and (min-width:1101px) and (max-width:1199px) {	
+}
+@media (min-width: 1200px) {
+/******footer******/	
+.buttonscroll{right:15px;}
+}
+@media (min-width: 1200px) and (max-width: 1299px) {
+/*****common*****/
+h2{ font-size: 45px;}	
+h3 {font-size: 42px;}
+p{ font-size: 17px; line-height: 30px;}
+.sec_padding {padding: 70px 0 0 0;} 
+/*****slider*****/
+.slider_section	{ margin-top: 65px;}
+.slider_section .carousel-caption h1{font-size: 45px; line-height: 55px;}
+.slider_section .carousel-caption span{font-size: 26px;}
+.slider_section .carousel-caption{ padding-top: 0; top: 45%;left: 12%;}
+.slider_section .carousel-caption h5{font-size: 38px; line-height: 50px; margin-bottom: 20px;}
+.banrCTA{ margin-top: 30px;}
+.slider_section .carousel-caption p {font-size: 20px;}
+.slider_section .carousel-indicators {margin-bottom: 0;margin-right: 20px;bottom: 20px;}
+.lexusimgLeft{ height: 100%; object-fit: cover;}
+.lexusMap iframe{ height: 350px;}
+.lexusContact{ height: auto; padding: 40px;}
+/******details*****/
+.explorevehicle_section{ padding-top: 45px;}
+.flex_sec{ padding: 45px 6.5% 50px 6.5%;}
+.exploreTitle h3{ font-size: 30px;}
+.line_btn {padding: 12px 35px;}
+.exploreFeature{ padding: 25px 30px;}
+.custom-nav .owl-prev img, .custom-nav .owl-next img{ width:90px;}
+.custom-nav .owl-prev, .custom-nav .owl-next{ top:110px;}
+.features_section { margin-top: 65px;}
+.featureAccordion .accordion-button {font-size: 26px;padding: 25px 0;}
+.featureAccordion .flex-shrink-0{ width:35%;}
+.featureAccordion .flex-shrink-0 img{ width:100%;}
+.featureAccordion {margin-bottom: 80px;}	
+}
+@media (min-width: 1300px) and (max-width: 1366px) {
+	
+/*****common*****/
+h2{ font-size: 45px;}	
+h3 {font-size: 42px;}
+p{ font-size: 17px; line-height: 30px;}
+.sec_padding {padding: 70px 0 0 0;} 
+/*****slider*****/
+.slider_section	{ margin-top: 65px;}
+.slider_section .carousel-caption h1{font-size: 55px; line-height: 65px; margin-bottom: 30px;}
+.slider_section .carousel-caption span{font-size: 26px;}
+.slider_section .carousel-caption{ padding-top: 0; top: 45%;left: 12%;}
+.slider_section .carousel-caption h5{font-size: 40px; line-height: 55px; margin-bottom: 20px;}
+.slider_section .carousel-indicators {margin-bottom: 0;margin-right: 35px;bottom: 35px;}
+.lexusimgLeft{ height: 100%; object-fit: cover;}
+.lexusMap iframe{ height: 400px;}
+.lexusContact{ height: auto; padding: 40px;}
+/******details*****/
+.explorevehicle_section{ padding-top: 45px;}
+.flex_sec{ padding: 45px 9.5% 50px 9.5%;}
+.exploreTitle h3{ font-size: 30px;}
+.line_btn {padding: 12px 35px;}
+.exploreFeature{ padding: 25px 30px;}
+.custom-nav .owl-prev img, .custom-nav .owl-next img{ width:90px;}
+.custom-nav .owl-prev, .custom-nav .owl-next{ top:110px;}
+.features_section { margin-top: 65px;}
+.featureAccordion .accordion-button {font-size: 26px;padding: 25px 0;}
+.featureAccordion .flex-shrink-0{ width:35%;}
+.featureAccordion .flex-shrink-0 img{ width:100%;}
+.featureAccordion {margin-bottom: 80px;}		
+}
+@media (min-width: 1367px) and (max-width: 1599px) {	
+/*****common*****/
+h2{ font-size: 45px;}	
+h3 {font-size: 42px;}
+p{ font-size: 17px; line-height: 30px;}
+.sec_padding {padding: 70px 0 0 0;} 
+/*****header*****/
+.logo img{width:160px;}
+/*****slider*****/
+.slider_section	{ margin-top: 66px;}
+.slider_section .carousel-caption h1{font-size: 54px; line-height: 66px;}
+.slider_section .primary_btn{font-size: 18px;}
+.slider_section .carousel-caption span{font-size: 26px; margin-top: 35px;}
+.slider_section .carousel-caption{ padding-top: 0; top: 45%;}
+.slider_section .carousel-caption h5 {font-size: 42px;line-height: 60px; margin-bottom: 20px;}
+.slider_section .carousel-indicators {margin-bottom: 0;margin-right: 30px;bottom: 30px;}
+.lexusimgLeft{ height: 100%; object-fit: cover;}
+.lexusMap iframe{ height: 400px;}
+.lexusContact {height: auto;padding: 45px;}
+/******details*****/
+.flex_sec{padding: 50px 5%;}
+.exploreTitle h3{ font-size: 30px;}
+.exploreFeature{ padding: 25px 40px;}
+.custom-nav .owl-prev, .custom-nav .owl-next{ top:110px;}
+.features_section { margin-top: 65px;}
+.featureAccordion .accordion-button {font-size: 26px;padding: 25px 0;}
+.featureAccordion {margin-bottom: 80px;}		
+}
+@media (min-width: 1600px) and (max-width: 1680px) { 
+/*****common*****/
+h2{ font-size: 45px;}	
+h3 {font-size: 42px;}
+p{ font-size: 17px; line-height: 30px;}
+.sec_padding {padding: 70px 0 0 0;} 
+/*****header*****/
+.logo img{width:170px;}
+/*****slider*****/
+.slider_section	{ margin-top: 66px;}
+.slider_section .carousel-caption h1{font-size: 60px; line-height: 70px;}
+.slider_section .carousel-caption span{font-size: 26px;}
+.slider_section .carousel-caption{ padding-top: 0;}
+.slider_section .carousel-caption h5 { font-size: 42px;line-height: 60px; margin-bottom: 20px;}
+.slider_section .carousel-indicators{ margin-bottom: 0;}
+.lexusimgLeft{ height: 100%; object-fit: cover;}
+.lexusMap iframe{ height: 400px;}
+.lexusContact {height: auto;padding: 55px;}
+/******details*****/
+.flex_sec{padding: 50px 9.5% 60px 9.5%;}
+.exploreTitle h3{ font-size: 30px;}
+.exploreFeature{ padding: 25px 40px;}
+.custom-nav .owl-prev, .custom-nav .owl-next{ top:135px;}
+.features_section { margin-top: 65px;}
+.featureAccordion .accordion-button {font-size: 26px;padding: 25px 0;}
+.featureAccordion {margin-bottom: 80px;}
+}
+@media (min-width: 1900px), (max-width: 1920px) and (-webkit-device-pixel-ratio: 1.25) {
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {max-width: 1400px;}
+}
+@media (min-width: 1900px) and (max-width: 1920px) {
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {max-width: 1400px;}	
+}
+@media (min-width: 1921px) and (max-width: 2560px) {
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {max-width: 1400px;}
+.flex_sec{padding: 75px 23%;}
+.custom-nav .owl-prev, .custom-nav .owl-next{ top:260px;}		
+}

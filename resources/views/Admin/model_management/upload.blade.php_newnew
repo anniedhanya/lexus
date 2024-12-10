@@ -1,0 +1,91 @@
+@extends('_layouts.default')
+
+@section('head_assets')
+<title>Dropzone File Upload in Laravel</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css" />
+<style>
+    .dropzone {
+        border: 2px dashed #6c757d;
+        border-radius: 5px;
+        padding: 20px;
+        background: #ffffff;
+    }
+    .dz-preview img {
+        max-width: 100%;
+        max-height: 175px;
+    }
+</style>
+@endsection
+
+@section('content-area')
+<div class="container">
+    <br/>
+    <h3 style="align:center">Dropzone File Upload with Laravel</h3>
+    <br/>
+    <form action="{{ route('file.upload') }}" class="dropzone" id="dropzoneForm">
+    </form>
+    <br/>
+    <div style="align:center">
+        <button type="button" class="btn btn-info" id="submit-all">Upload</button>
+    </div>
+    <br/>
+    <br/>
+    <div id="preview"></div>
+</div>
+@endsection
+
+@section('footer_scripts')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.js"></script>
+<script>
+    let fileDropzone = new Dropzone("#file-dropzone", {
+        url: "{{ route('upload.files') }}",
+            autoProcessQueue: false,
+            maxFiles: 10, // Set the maximum number of files
+            maxFileSize: 2,
+            clickable: true,
+            acceptedFiles: ".png,.jpg,.gif,.bmp,.jpeg",
+            init: function() {
+                let submitButton = document.querySelector('#submit-all');
+                let myDropzone = this;
+
+                submitButton.addEventListener("click", function() {
+                    myDropzone.processQueue();
+                });
+
+                this.on("complete", function() {
+                    if (this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0) {
+                        this.removeAllFiles();
+                        listImages();
+                    }
+                });
+            },
+        };
+
+        listImages();
+
+        function listImages() {
+            $.ajax({
+                url: "{{ route('file.list') }}",
+                success: function(data) {
+                    $('#preview').html(data);
+                }
+            });
+        }
+
+        $(document).on('click', '.remove_image', function() {
+            let name = $(this).attr('id');
+            $.ajax({
+                url: "{{ route('file.delete') }}",
+                method: "POST",
+                data: { name: name, _token: "{{ csrf_token() }}" },
+                success: function() {
+                    listImages();
+                }
+            });
+        });
+    });
+</script>
+@endsection
