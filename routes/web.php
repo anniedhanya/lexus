@@ -126,12 +126,15 @@ Route::group(array('prefix' => 'admin', 'middleware' => ['auth.admin']), functio
 
     Route::post('upload_images', 'App\Http\Controllers\Admin\ModelManagementController@upload_images')->name('admin.model_management.upload_images');
     Route::post('/upload-files', [ModelManagementController::class, 'uploadFiles'])->name('upload.files');
+    Route::get('{id}/variants', 'App\Http\Controllers\Admin\ModelManagementController@variants');
 
     Route::post('/file-upload', [ModelManagementController::class, 'upload'])->name('file.upload');
-Route::get('/file-list', [ModelManagementController::class, 'list'])->name('file.list');
-Route::post('/file-delete', [ModelManagementController::class, 'delete'])->name('file.delete');
+    Route::get('/file-list', [ModelManagementController::class, 'list'])->name('file.list');
+    Route::post('/file-delete', [ModelManagementController::class, 'delete'])->name('file.delete');
 
-Route::post('/upload/store', 'App\Http\Controllers\Admin\ModelManagementController@storeCarImages');
+   Route::post('/upload/store', 'App\Http\Controllers\Admin\ModelManagementController@storeCarImages');
+   Route::post('/variants_store', 'App\Http\Controllers\Admin\ModelManagementController@variantsStore');
+
 
   });
 

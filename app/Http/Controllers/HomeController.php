@@ -13,6 +13,9 @@ use App\Models\Settings;
 use App\Models\Model;
 use Illuminate\Support\Facades\Validator;
 use App\Models\ModelImages;
+use App\Models\Gallery;
+use App\Models\Features;
+use App\Models\Variants;
 class HomeController extends Controller {
 
     
@@ -32,7 +35,17 @@ class HomeController extends Controller {
     } else {
     $bannerImagesArray = [];
     }
-    return view('detail', compact('bannerImagesArray'));
+    $gallery = Gallery::where('model_id',$models_id['id'])->get();   
+    $gallery_all = Gallery::where('model_id',$models_id['id'])->where('type',1)->get();   
+    $gallery_in = Gallery::where('model_id',$models_id['id'])->where('type',3)->get();   
+    $gallery_ex = Gallery::where('model_id',$models_id['id'])->where('type',2)->get();   
+
+
+    $features = Features::where('model_id',$models_id['id'])->get();   
+    $variants = Variants::where('model_id',$models_id['id'])->get();   
+
+    return view('detail', compact('bannerImagesArray','gallery','features','variants','gallery_all','gallery_in','gallery_ex'));
+
 
   }
 
